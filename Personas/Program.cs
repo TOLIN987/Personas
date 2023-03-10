@@ -18,8 +18,4 @@ for (int i = 0; i < N; i++)
 
 Console.Clear();
 
-for (int i = 0; i < N; i++)
-{
-    Console.WriteLine(p[i].ToString());
-}
 Console.ReadKey();
