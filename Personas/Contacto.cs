@@ -21,10 +21,31 @@
         {
             this.telefono = telefono;
         }
-
-        public override string ToString()
+        public string Obtain_Data()
         {
-            return base.ToString() + " " + telefono;
+            string line;
+            char com = ',';
+            Console.WriteLine("Type your name");
+            line = Console.ReadLine();
+            
+            DateTime dateTime;
+            bool validation = false;
+            while (true)
+            {
+                Console.WriteLine("Type your birthdate format(DD/MM/YYY)");
+                validation = DateTime.TryParse(Console.ReadLine(), out dateTime);
+                if (validation== true)
+                {
+                    break;
+                }
+            }
+
+            line = line + com + dateTime;
+            Console.WriteLine("Type your Phonenumber");
+            line = line + com + Console.ReadLine();                 
+            return line;
         }
+
+        
     }
 }

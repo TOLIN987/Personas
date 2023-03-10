@@ -35,11 +35,6 @@
         {
             this.nombre = nombre;
             this.fechaNacimiento = fechaNacimiento;
-        }
-
-        public override string ToString()
-        {
-            return nombre.ToUpper() + " " + Edad;
-        }
+        }      
     }
 }

@@ -1,21 +1,11 @@
 ﻿using Personas;
 
-
-Console.WriteLine("¿Cuantos contactos desea agregar?");
-int N = Int32.Parse(Console.ReadLine());
-Contacto[] p = new Contacto[N];
-
-for (int i = 0; i < N; i++)
-{
+    Contacto p = new Contacto();
+    string line = p.Obtain_Data();
+    string[]  data;
+    data = line.Split(',');
+    p.Nombre = data[0];
+    p.FechaNacimiento = DateTime.Parse(data[1]);
+    p.Telefono = data[2];
     Console.Clear();
-    p[i] = new Contacto();
-    Console.WriteLine("Contacto {0}\nNombre", i + 1);
-    p[i].Nombre = Console.ReadLine();
-    Console.WriteLine("Telefono");
-    p[i].Telefono = Console.ReadLine();
-    p[i].FechaNacimiento = DateTime.Parse("2003/01/01");
-}
-
-Console.Clear();
-
-Console.ReadKey();
+    Console.ReadKey();
